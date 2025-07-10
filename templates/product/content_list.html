@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>product</title>
+</head>
+<body>
+<h1>product</h1>
+{% if content_list %}
+    {% for content in content_list %}
+        <hr/>
+        <h3><a href="/product/{{ content.id }}/">{{ content.title }}</a></h3>
+        <h5>{{ content.content}}</h5>
+    {% endfor %} <!-- 템플릿 태그(제어문 등) ( 주석에도 템플릿 문법 쓰면 안됨 ) -->
+{% else %}
+    <p>content가 없습니다.</p>
+{% endif %}
+</body>
+</html>
