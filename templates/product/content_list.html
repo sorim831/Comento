@@ -14,8 +14,8 @@
     </div>
     <div class="col-lg-5">
       <h3><a href="/product/{{content.id}}/">{{ content.title }}</a></h3>
-      <h5>{{ content.content}}</h5>
-      <a class="btn btn-primary" href="#!">Call to Action!</a>
+      <h5>{{ content.content | truncatewords:30}}</h5>
+      <a class="btn btn-primary" href="{% url 'detail' content.id %}">Call to Action!</a>
     </div>
   </div>
   {% endfor %}
