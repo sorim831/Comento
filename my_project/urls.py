@@ -23,4 +23,5 @@ urlpatterns = [
     #path('product/', views.index), / 개별 앱을 수정할 때마다 프로젝트 전체에 영향을 주는 건 위험도가 크기 때문에 아래 형태로 변경
     path('product/', include('product.urls')),
     path('',include('pages.urls')),
+    path('accounts/', include('accounts.urls'))
 ]
