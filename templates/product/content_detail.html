@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% block content %}
 <h2>{{ content_list.title }}</h2>
+{% if content_list.image %}
+  <img src="{{ content_list.image.url }}" class="img-fluid mb-3" alt="{{ content_list.title }}">
+{% endif %}
 <div>{{ content_list.content }}</div>
 <section class="mb-5">
   <div class="card bg-light">
