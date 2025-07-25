@@ -9,6 +9,8 @@ class MainContent(models.Model):
     content = models.TextField()
     pub_date = models.DateTimeField('date published')
 
+    image = models.ImageField(upload_to='content_images/', blank=True, null=True)
+
     def __str__(self):
         return self.title
 
